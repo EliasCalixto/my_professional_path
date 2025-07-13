@@ -27,7 +27,7 @@ print(titanic_df.describe(include=['object']))
 plt.figure(figsize=(8, 6)) # Crear una nueva figura con tamaño 8x6 pulgadas
 # Divide el rango de edades en 30 intervalos o barras. No considera valores nulos (nan)
 # Añade una curva KDE (Kernel Density Estimate) sobre el histograma, que representa una estimación suave de la distribución de probabilidad de los datos
-sns.histplot(titanic_df['Age'].dropna(), bins=30, kde=True)
+sns.histplot(data=titanic_df, x='Age', bins=30, kde=True)
 plt.xlabel('Edad')
 plt.ylabel('Frecuencia')
 plt.title('Distribución de Edades en el Titanic')
